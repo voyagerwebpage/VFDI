@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFD Innovations - Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="mailto:vfdinnovations@gmail.com?subject=Project%20Quotation%20Request" class="btn">Ask for Project Quotation</a>
+                <a href="contact.html" class="btn btn-alt">Fix a virtual appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Services Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+
+                <!-- Planning & Quote Support -->
+                <div class="grid-2">
+                    <img src="images/planning.png" alt="Planning" class="section-img">
+                    <div class="card">
+                        <h3>Planning & Quote Support</h3>
+                        <p>At the planning and quote stage, our team leverages industry expertise and manual calculations to provide estimations for:</p>
+                        <ul class="checklist">
+                            <li><b>Process Planning –</b> Defining the forming strategy for optimal production</li>
+                            <li><b>Tonnage Estimation –</b> Predicting press tonnage requirements based on manual calculations</li>
+                            <li><b>Blank Size Estimation –</b> Estimating material usage to optimize cost and minimize waste</li>
+                        </ul>
+                        <p>While no simulations are conducted at this stage, our expert insights ensure <b>efficient feasibility assessment, reduced material costs, and better decision-making</b> for tool and production planning.</p>
+                    </div>
+                </div>
+
+                <!-- Product Design & Development -->
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Product Design & Development Support</h3>
+                        <ul class="checklist">
+                            <li>Advanced formability analysis</li>
+                            <li>Feasibility studies for multiple design iterations</li>
+                            <li>Optimized blank size estimation for efficient material utilization and cost-effective manufacturing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tooling & Production Support -->
+                <div class="grid-2">
+                    <img src="images/tooling.png" alt="Tooling" class="section-img">
+                    <div class="card">
+                        <h3>Tooling & Production Support</h3>
+                        <ul class="checklist">
+                            <li>Forming Simulation & Feasibility Studies: Simulations to analyze part formability and predict defects</li>
+                            <li>Method Planning: Optimized stamping processes for sheet metal components</li>
+                            <li>Process Optimization & Cost Reduction: Cost-saving strategies and waste reduction techniques</li>
+                            <li>Efficient blank and trim development</li>
+                            <li>Material change studies</li>
+                            <li>Process improvement studies</li>
+                            <li>Springback compensation strategies for enhanced accuracy</li>
+                            <li>Root cause analysis of existing production problems</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>📩 Get in Touch - vfdinnovations@gmail.com</p>
+            <p>&copy; 2023 VFD Innovations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", function() {
+            document.querySelector(".nav-list").classList.toggle("show");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFD Innovations - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="mailto:vfdinnovations@gmail.com?subject=Project%20Quotation%20Request" class="btn">Ask for Project Quotation</a>
+                <a href="contact.html" class="btn btn-alt">Fix a virtual appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                
+                <div class="grid-2">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>SAM SQUARE<br>
+                            NO23, 5th Main, 2nd Floor,<br>
+                            Rajarajeshwari Complex,<br>
+                            BT Somanna Circle,<br>
+                            Bengaluru-560070</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:vfdinnovations@gmail.com">vfdinnovations@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91-72004510503</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>📩 Get in Touch - <a href="mailto:vfdinnovations@gmail.com">vfdinnovations@gmail.com</a></p>
+            <p>&copy; 2023 VFD Innovations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", function() {
+            document.querySelector(".nav-list").classList.toggle("show");
+        });
+    </script>
+
+</body>
+</html>

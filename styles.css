@@ -1,0 +1,305 @@
+/* Base Styles */
+:root {
+    --primary: #2A4A6E;
+    --accent: #FF6B6B;
+    --text: #333;
+    --light: #f8f9fa;
+    --gap: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text);
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.grid-2, .grid-3 {
+    display: grid;
+    gap: var(--gap);
+}
+
+/* Header */
+header {
+    background: var(--primary);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left-align hamburger menu */
+.hamburger {
+    order: -1; /* Moves it to the left in flex container */
+    margin-right: auto; /* Pushes other elements to the right */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* Button Styling */
+.btn {
+    background: #FFD700; /* Bright yellow */
+    color: var(--text);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #FFC107;
+}
+
+.btn-alt {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-alt:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Hero Section - Added Logo */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+    background: var(--light);
+}
+
+.hero img {
+    max-width: 150px; /* Adjust size as needed */
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.hero h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.lead {
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+/* Checklist */
+.checklist {
+    list-style: none;
+}
+
+.checklist li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.checklist li::before {
+    content: '✓';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Center content box */
+.content-box {
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto; /* Centers the content */
+    text-align: center;
+}
+
+
+/* Footer */
+.footer {
+    background: var(--primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: flex-start; /* Ensures hamburger stays left */
+        flex-wrap: nowrap; /* Keeps elements inline */
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .hamburger {
+        margin-left: 0; /* Aligns directly to the left */
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-wrap: nowrap; /* Prevents buttons from stacking */
+        gap: 0.5rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem; /* Slightly smaller buttons for better fit */
+        font-size: 0.9rem;
+    }
+
+    .section-img {
+        max-width: 100%; /* Ensures it adapts to smaller screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav-list {
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+
+    .cta-buttons {
+        margin-top: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero {
+        padding: 6rem 0;
+    }
+}
+
+/* Hide navigation links on small screens */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.section-img {
+    width: 100%;
+    max-width: 500px; /* Prevents it from getting too large on bigger screens */
+    height: auto; /* Keeps aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
